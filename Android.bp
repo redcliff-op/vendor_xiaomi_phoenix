@@ -1,6 +1,5 @@
 /**
- * Copyright (C) 2020 The LineageOS Project
- * Copyright (C) 2020 The PixelExperience Project
+ * Copyright (C) 2020 ArrowOS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -35,8 +34,8 @@ cc_prebuilt_library_shared {
 		},
 	},
 	compile_multilib: "both",
+	check_elf_files: false,
 	prefer: true,
-        check_elf_files: false,
 }
 
 android_app_import {
