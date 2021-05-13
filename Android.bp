@@ -29,11 +29,14 @@ cc_prebuilt_library_shared {
 		none: true,
 	},
 	target: {
+		android_arm: {
+			srcs: ["proprietary/system_ext/lib/com.quicinc.cne.api@1.0.so"],
+		},
 		android_arm64: {
 			srcs: ["proprietary/system_ext/lib64/com.quicinc.cne.api@1.0.so"],
 		},
 	},
-	compile_multilib: "64",
+	compile_multilib: "both",
 	check_elf_files: false,
 	prefer: true,
 	system_ext_specific: true,
@@ -46,11 +49,14 @@ cc_prebuilt_library_shared {
 		none: true,
 	},
 	target: {
+		android_arm: {
+			srcs: ["proprietary/system_ext/lib/com.quicinc.cne.api@1.1.so"],
+		},
 		android_arm64: {
 			srcs: ["proprietary/system_ext/lib64/com.quicinc.cne.api@1.1.so"],
 		},
 	},
-	compile_multilib: "64",
+	compile_multilib: "both",
 	check_elf_files: false,
 	prefer: true,
 	system_ext_specific: true,
@@ -63,11 +69,14 @@ cc_prebuilt_library_shared {
 		none: true,
 	},
 	target: {
+		android_arm: {
+			srcs: ["proprietary/system_ext/lib/com.quicinc.cne.constants@1.0.so"],
+		},
 		android_arm64: {
 			srcs: ["proprietary/system_ext/lib64/com.quicinc.cne.constants@1.0.so"],
 		},
 	},
-	compile_multilib: "64",
+	compile_multilib: "both",
 	check_elf_files: false,
 	prefer: true,
 	system_ext_specific: true,
@@ -80,11 +89,14 @@ cc_prebuilt_library_shared {
 		none: true,
 	},
 	target: {
+		android_arm: {
+			srcs: ["proprietary/system_ext/lib/com.quicinc.cne.constants@2.0.so"],
+		},
 		android_arm64: {
 			srcs: ["proprietary/system_ext/lib64/com.quicinc.cne.constants@2.0.so"],
 		},
 	},
-	compile_multilib: "64",
+	compile_multilib: "both",
 	check_elf_files: false,
 	prefer: true,
 	system_ext_specific: true,
@@ -97,11 +109,14 @@ cc_prebuilt_library_shared {
 		none: true,
 	},
 	target: {
+		android_arm: {
+			srcs: ["proprietary/system_ext/lib/com.quicinc.cne.constants@2.1.so"],
+		},
 		android_arm64: {
 			srcs: ["proprietary/system_ext/lib64/com.quicinc.cne.constants@2.1.so"],
 		},
 	},
-	compile_multilib: "64",
+	compile_multilib: "both",
 	check_elf_files: false,
 	prefer: true,
 	system_ext_specific: true,
@@ -230,17 +245,6 @@ android_app_import {
 }
 
 android_app_import {
-	name: "imssettings",
-	owner: "xiaomi",
-	apk: "proprietary/system_ext/app/imssettings/imssettings.apk",
-	certificate: "platform",
-	dex_preopt: {
-		enabled: false,
-	},
-	system_ext_specific: true,
-}
-
-android_app_import {
 	name: "WfdService",
 	owner: "xiaomi",
 	apk: "proprietary/system_ext/priv-app/WfdService/WfdService.apk",
@@ -339,15 +343,6 @@ prebuilt_etc_xml {
 	name: "manifest_android.hardware.drm@1.3-service.widevine",
 	owner: "xiaomi",
 	src: "proprietary/vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml",
-	filename_from_src: true,
-	sub_dir: "vintf/manifest",
-	soc_specific: true,
-}
-
-prebuilt_etc_xml {
-	name: "manifest_vendor.xiaomi.hardware.mlipay",
-	owner: "xiaomi",
-	src: "proprietary/vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mlipay.xml",
 	filename_from_src: true,
 	sub_dir: "vintf/manifest",
 	soc_specific: true,
