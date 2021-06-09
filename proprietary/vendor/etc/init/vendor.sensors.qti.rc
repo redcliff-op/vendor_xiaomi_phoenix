@@ -38,3 +38,4 @@ service vendor-sensor-sh /vendor/bin/init.qcom.sensors.sh
     class late_start
     user root
     oneshot
+    disabled
